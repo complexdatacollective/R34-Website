@@ -1,18 +1,18 @@
 import React from 'react';
 import Menu from './Menu';
-import '../index.css';
+import '../tailwind.output.css';
 
 
 function Home() {
     return(
         <div className='flex bg-gray-400'>
             <Menu />
-            <h1> 
+            <h1 className='text-xl'> 
                 Partner Services Needs Assessment
             </h1>
-            <div>
+            <div className='flex'>
                 <div>
-                    <h2>Project Summary</h2>
+                    <h2 className='text-l'>Project Summary</h2>
                     <p>
                     This NIH-funded project aims to 
                     characterize the needs of health 
