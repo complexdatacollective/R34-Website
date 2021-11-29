@@ -13,21 +13,21 @@ function StreamA() {
     return(
         <div className='flex-col bg-gray-200 p-8 h-screen'>
             <Menu />
-            <motion.h1 className='text-6xl p-8 pl-12'
+            <motion.h1 className='text-7xl p-8 ml-20'
             variants={fadeLeft}
             initial="start"
             animate="end"
             transition={{ duration: 1 }}> 
                 Data Quality and Utilization
             </motion.h1>
-            <div className='flex pt-12 w-screen'>
-                <div className='p-12'>
-                    <motion.object type='image/svg+xml' 
-                    data={Blob1} className='transform scale-100'
-                    />
+            <div className='flex pt-12'>
+                <div className='ml-20'>
+                    <motion.img src={Blob1} alt='Blob Image' width='450' height='450'
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}/>
                 </div>
-                <div className='w-1/3 p-12'>
-                    <motion.p className='pt-3 text-lg'
+                <div className='w-1/3 p-4 ml-40'>
+                    <motion.p className='pt-3 text-2xl'
                     variants={fadeLeft}
                     initial="start"
                     animate="end"

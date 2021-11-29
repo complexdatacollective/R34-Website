@@ -7,7 +7,7 @@ import StreamA from './components/StreamA';
 function App() {
   return (
     <Router>
-      <AnimatePresence>
+      <AnimatePresence exitBeforeEnter>
         <Switch location={location} key={location.pathname}>
           <Route exact path='/' component={Home}/>
           <Route exact path='/streamA' component={StreamA}/>
