@@ -11,7 +11,7 @@ function StreamA() {
       };
     
     return(
-        <div className='flex-col bg-gray-200 p-8 h-screen'>
+        <div className='flex-col p-8 h-screen'>
             <Menu />
             <motion.h1 className='text-7xl p-8 ml-20'
             variants={fadeLeft}

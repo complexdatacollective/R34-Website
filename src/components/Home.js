@@ -10,17 +10,27 @@ import '../tailwind.output.css';
 
 
 function Home() {
+    const fadeOut = { 
+        hidden: { opacity: 0},
+        visible: { opacity: 1 }
+    };
     return(
-        <div className='flex-col bg-gray-200 p-8 h-screen'>
+        <div className='flex-col p-8 h-screen'>
             <Menu />
             <motion.h1 className='text-7xl p-8 pl-12 ml-20' 
             whileTap={{ scale: 0.95 }} 
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1 }}> 
+            variants={fadeOut}
+            animate='visible'
+            exit='hidden'
+            transition={{ duration: 0.5 }}> 
                 Partner Services Needs Assessment
             </motion.h1>
             <div className='flex pt-12 pl-12 ml-20'>
-                <div className='flex-col justify-center w-1/3'>
+                <motion.div className='flex-col justify-center w-1/3'
+                variants={fadeOut}
+                animate='visible'
+                exit='hidden'
+                transition={{ duration: 0.5 }}>
                     <h2 className='text-3xl'>Project Summary</h2>
                     <p className='pt-3 text-lg'>
                     This NIH-funded project aims to 
@@ -36,9 +46,9 @@ function Home() {
                     Informatics Specialists. Explore the key findings from these interviews by 
                     clicking on a topic.
                     </p>
-                </div>
+                </motion.div>
                 
-                <div className='grid grid-cols-2 ml-40 mb-10 border-4'>
+                <div className='grid grid-cols-2 ml-40 mb-10'>
                     <Link to='/StreamA'>
                         <motion.img src={Blob1} alt='Stream A'
                             whileHover={{ scale: 1.05 }}
