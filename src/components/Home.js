@@ -52,18 +52,40 @@ function Home() {
                     <Link to='/StreamA'>
                         <motion.img src={Blob1} alt='Stream A'
                             whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}/>
+                            whileTap={{ scale: 0.95 }}
+                            variants={fadeOut}
+                            animate='visible'
+                            exit='hidden'
+                            transition={{ duration: 0.5 }}/>
                     </Link>
                     
+                    <Link to='/StreamB'>
                     <motion.img src={Blob2} alt='Stream B'
                         whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}/>
-                    <motion.img src={Blob3} alt='Stream C'
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}/>
+                        whileTap={{ scale: 0.95 }}
+                        variants={fadeOut}
+                        animate='visible'
+                        exit='hidden'
+                        transition={{ duration: 0.5 }}/>
+                    </Link>
+                    <Link to='/StreamC'>
+                        <motion.img src={Blob3} alt='Stream C'
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            variants={fadeOut}
+                            animate='visible'
+                            exit='hidden'
+                            transition={{ duration: 0.5 }}/>
+                    </Link>
+                    <Link to='/StreamD'>
                     <motion.img src={Blob4} alt='Stream D'
                         whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}/>
+                        whileTap={{ scale: 0.95 }}
+                        variants={fadeOut}
+                        animate='visible'
+                        exit='hidden'
+                        transition={{ duration: 0.5 }}/>
+                    </Link>
                 </div>
             </div>
             

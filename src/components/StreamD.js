@@ -1,19 +1,19 @@
 import React from 'react';
 import Menu from './Menu';
 import { motion } from 'framer-motion';
-import Blob1 from './Home-Icons/Blob1.svg';
+import Blob4 from './Home-Icons/Blob4.svg';
 import '../tailwind.output.css';
 
-function StreamA() {
+function StreamD() {
     return(
         <div className='flex-col p-8 h-screen'>
             <Menu />
             <motion.h1 className='text-7xl p-8 ml-20'>
-                Data Quality and Utilization
+                Resource Access and Allocation
             </motion.h1>
             <div className='flex pt-12'>
                 <div className='ml-20'>
-                    <motion.img src={Blob1} alt='Blob Image' width='450' height='450'
+                    <motion.img src={Blob4} alt='Blob Image' width='450' height='450'
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}/>
                 </div>
@@ -31,4 +31,4 @@ function StreamA() {
     );
 }
 
-export default StreamA;
+export default StreamD;
