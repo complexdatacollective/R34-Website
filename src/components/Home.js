@@ -18,7 +18,7 @@ const Home = function Home() {
     <div className="flex-col p-8 h-screen">
       <Menu />
       <motion.h1
-        className="text-7xl p-8 pl-12 ml-20"
+        className="text-7xl pl-12 ml-20"
         whileTap={{ scale: 0.95 }}
         variants={fadeOut}
         animate="visible"

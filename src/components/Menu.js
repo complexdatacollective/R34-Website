@@ -2,7 +2,7 @@
 import React, { useRef, useState } from 'react';
 import '../tailwind.output.css';
 
-const Menu = function () {
+const Menu = function Menu() {
   const menuRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
   const menuClick = () => setIsOpen(!isOpen);
