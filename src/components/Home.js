@@ -53,7 +53,7 @@ const Home = function Home() {
         </motion.div>
 
         <div className="grid grid-cols-2 ml-40 mb-10">
-          <Link to="/StreamA">
+          <Link to="/data-quality">
             <motion.img
               src={Blob1}
               alt="Stream A"
@@ -66,7 +66,7 @@ const Home = function Home() {
             />
           </Link>
 
-          <Link to="/StreamB">
+          <Link to="/efficiency">
             <motion.img
               src={Blob2}
               alt="Stream B"
@@ -78,7 +78,7 @@ const Home = function Home() {
               transition={{ duration: 0.5 }}
             />
           </Link>
-          <Link to="/StreamC">
+          <Link to="/trust-and-disclosure">
             <motion.img
               src={Blob3}
               alt="Stream C"
@@ -90,7 +90,7 @@ const Home = function Home() {
               transition={{ duration: 0.5 }}
             />
           </Link>
-          <Link to="/StreamD">
+          <Link to="/resource-access">
             <motion.img
               src={Blob4}
               alt="Stream D"

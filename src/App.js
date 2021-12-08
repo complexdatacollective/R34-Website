@@ -3,10 +3,11 @@ import { AnimatePresence } from 'framer-motion';
 import React from 'react';
 import { Switch, Route, useLocation } from 'react-router-dom';
 import Home from './components/Home';
-import Stream from './components/Stream';
-import {
-  StreamAInfo, StreamBInfo, StreamCInfo, StreamDInfo,
-} from './components/StreamInfo';
+
+import DataQuality from './components/DataQuality';
+import Efficiency from './components/Efficiency';
+import TrustAndDisclosure from './components/TrustAndDisclosure';
+import ResourceAccess from './components/ResourceAccess';
 
 const App = function App() {
   const location = useLocation();
@@ -16,17 +17,17 @@ const App = function App() {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route exact path="/streamA">
-          <Stream info={StreamAInfo} />
+        <Route exact path="/data-quality">
+          <DataQuality />
         </Route>
-        <Route exact path="/streamB">
-          <Stream info={StreamBInfo} />
+        <Route exact path="/efficiency">
+          <Efficiency />
         </Route>
-        <Route exact path="/streamC">
-          <Stream info={StreamCInfo} />
+        <Route exact path="/trust-and-disclosure">
+          <TrustAndDisclosure />
         </Route>
-        <Route exact path="/streamD">
-          <Stream info={StreamDInfo} />
+        <Route exact path="/resource-access">
+          <ResourceAccess />
         </Route>
       </Switch>
     </AnimatePresence>

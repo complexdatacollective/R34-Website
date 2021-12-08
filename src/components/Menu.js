@@ -1,6 +1,5 @@
 /* eslint-disable react/jsx-filename-extension */
 import React, { useRef, useState } from 'react';
-import '../tailwind.output.css';
 
 const Menu = function Menu() {
   const menuRef = useRef(null);
