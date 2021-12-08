@@ -4,7 +4,7 @@ import React from 'react';
 import { Switch, Route, useLocation } from 'react-router-dom';
 import Home from './components/Home';
 
-import DataQuality from './components/DataQuality';
+import DataQuality from './components/DataQuality/DataQuality';
 import Efficiency from './components/Efficiency';
 import TrustAndDisclosure from './components/TrustAndDisclosure';
 import ResourceAccess from './components/ResourceAccess';

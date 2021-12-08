@@ -1,8 +1,8 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import { motion } from 'framer-motion';
-import Page from './Page';
-import Blob1 from './Home-Icons/Blob1.svg';
+import Page from '../Page';
+import Blob1 from '../Home-Icons/Blob1.svg';
 
 const DataQualityIntro = function DataQualityIntro() {
   return (

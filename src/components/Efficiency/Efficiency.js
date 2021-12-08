@@ -1,16 +1,16 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import { Switch, Route, useRouteMatch } from 'react-router-dom';
-import DataQualityIntro from './DataQualityIntro';
-import Stream from './Stream';
+import EfficiencyIntro from './EfficiencyIntro';
+import Stream from '../Stream';
 
-const DataQuality = function DataQuality() {
+const Efficiency = function Efficiency() {
   const match = useRouteMatch();
   return (
     <Stream>
       <Switch>
         <Route exact path={match.path}>
-          <DataQualityIntro />
+          <EfficiencyIntro />
         </Route>
       </Switch>
     </Stream>
@@ -18,4 +18,4 @@ const DataQuality = function DataQuality() {
   );
 };
 
-export default DataQuality;
+export default Efficiency;
