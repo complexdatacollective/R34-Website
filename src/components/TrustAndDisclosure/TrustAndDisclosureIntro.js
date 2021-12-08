@@ -1,8 +1,8 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import { motion } from 'framer-motion';
-import Page from './Page';
-import Blob3 from './Home-Icons/Blob3.svg';
+import Page from '../Page';
+import Blob3 from '../Home-Icons/Blob3.svg';
 
 const TrustAndDisclosureIntro = function TrustAndDisclosureIntro() {
   return (

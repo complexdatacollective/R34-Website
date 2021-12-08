@@ -2,7 +2,7 @@
 import React from 'react';
 import { Switch, Route, useRouteMatch } from 'react-router-dom';
 import TrustAndDisclosureIntro from './TrustAndDisclosureIntro';
-import Stream from './Stream';
+import Stream from '../Stream';
 
 const TrustAndDisclosure = function TrustAndDisclosure() {
   const match = useRouteMatch();

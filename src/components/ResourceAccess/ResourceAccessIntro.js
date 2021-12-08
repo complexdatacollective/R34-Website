@@ -1,8 +1,8 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import { motion } from 'framer-motion';
-import Page from './Page';
-import Blob4 from './Home-Icons/Blob4.svg';
+import Page from '../Page';
+import Blob4 from '../Home-Icons/Blob4.svg';
 
 const ResourceAccessIntro = function ResourceAccessIntro() {
   return (

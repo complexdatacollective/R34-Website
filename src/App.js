@@ -5,9 +5,9 @@ import { Switch, Route, useLocation } from 'react-router-dom';
 import Home from './components/Home';
 
 import DataQuality from './components/DataQuality/DataQuality';
-import Efficiency from './components/Efficiency';
-import TrustAndDisclosure from './components/TrustAndDisclosure';
-import ResourceAccess from './components/ResourceAccess';
+import Efficiency from './components/Efficiency/Efficiency';
+import TrustAndDisclosure from './components/TrustAndDisclosure/TrustAndDisclosure';
+import ResourceAccess from './components/ResourceAccess/ResourceAccess';
 
 const App = function App() {
   const location = useLocation();

@@ -1,8 +1,8 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import { motion } from 'framer-motion';
-import Page from './Page';
-import Blob2 from './Home-Icons/Blob2.svg';
+import Page from '../Page';
+import Blob2 from '../Home-Icons/Blob2.svg';
 
 const EfficiencyIntro = function EfficiencyIntro() {
   return (

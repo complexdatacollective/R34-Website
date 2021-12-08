@@ -2,7 +2,7 @@
 import React from 'react';
 import { Switch, Route, useRouteMatch } from 'react-router-dom';
 import ResourceAccessIntro from './ResourceAccessIntro';
-import Stream from './Stream';
+import Stream from '../Stream';
 
 const ResourceAccess = function ResourceAccess() {
   const match = useRouteMatch();
