@@ -1,12 +1,15 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useHistory } from 'react-router-dom';
 import Page from '../Page';
 import Blob1 from '../Home-Icons/Blob1.svg';
 
 const DataQualityIntro = function DataQualityIntro() {
+  const history = useHistory();
+  const handleScroll = () => history.push('data-quality/pg2');
   return (
-    <Page>
+    <Page onScroll={handleScroll}>
       <motion.h1 className="text-7xl ml-20">
         Data Quality
       </motion.h1>

@@ -1,12 +1,15 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useHistory } from 'react-router-dom';
 import Page from '../Page';
 import Blob4 from '../Home-Icons/Blob4.svg';
 
 const ResourceAccessIntro = function ResourceAccessIntro() {
+  const history = useHistory();
+  const handleScroll = () => history.push('resource-access/pg2');
   return (
-    <Page>
+    <Page onScroll={handleScroll}>
       <motion.h1 className="text-7xl ml-20">
         Resource Access
       </motion.h1>

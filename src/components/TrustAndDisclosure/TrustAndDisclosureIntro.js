@@ -1,12 +1,15 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useHistory } from 'react-router-dom';
 import Page from '../Page';
 import Blob3 from '../Home-Icons/Blob3.svg';
 
 const TrustAndDisclosureIntro = function TrustAndDisclosureIntro() {
+  const history = useHistory();
+  const handleScroll = () => history.push('trust-and-disclosure/pg2');
   return (
-    <Page>
+    <Page onScroll={handleScroll}>
       <motion.h1 className="text-7xl ml-20">
         Trust and Disclosure
       </motion.h1>
