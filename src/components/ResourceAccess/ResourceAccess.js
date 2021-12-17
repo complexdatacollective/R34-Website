@@ -3,6 +3,7 @@ import React from 'react';
 import { Switch, Route, useRouteMatch } from 'react-router-dom';
 import ResourceAccessIntro from './ResourceAccessIntro';
 import Stream from '../Stream';
+import ResourceAccessPg2 from './ResourceAccessPg2';
 
 const ResourceAccess = function ResourceAccess() {
   const match = useRouteMatch();
@@ -11,6 +12,9 @@ const ResourceAccess = function ResourceAccess() {
       <Switch>
         <Route exact path={match.path}>
           <ResourceAccessIntro />
+        </Route>
+        <Route path={`${match.path}/pg2`}>
+          <ResourceAccessPg2 />
         </Route>
       </Switch>
     </Stream>
