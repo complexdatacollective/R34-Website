@@ -22,10 +22,19 @@ const Menu = function Menu() {
       <nav ref={menuRef} className={isOpen ? 'visible' : 'invisible'}>
         <ul>
           <li>
-            <a href="/About">Project Description</a>
+            <a href="/">Home</a>
           </li>
           <li>
-            <a href="/Implementation">Implementation</a>
+            <a href="/data-quality">Data Quality</a>
+          </li>
+          <li>
+            <a href="/efficiency">Efficiency</a>
+          </li>
+          <li>
+            <a href="/trust-and-disclosure">Trust and Disclosure</a>
+          </li>
+          <li>
+            <a href="/resource-access">Resource Access</a>
           </li>
         </ul>
       </nav>
