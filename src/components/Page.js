@@ -1,6 +1,5 @@
-/* eslint-disable react/jsx-filename-extension */
-/* eslint-disable react/prop-types */
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Page = function Page({ children }) {
   return (
@@ -8,6 +7,10 @@ const Page = function Page({ children }) {
       {children}
     </div>
   );
+};
+
+Page.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
 export default Page;

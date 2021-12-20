@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-filename-extension */
 import { AnimatePresence } from 'framer-motion';
 import React from 'react';
 import { Switch, Route, useLocation } from 'react-router-dom';

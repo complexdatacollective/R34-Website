@@ -1,4 +1,4 @@
-/* eslint-disable react/jsx-filename-extension */
+
 import React, { useRef, useState } from 'react';
 
 const Menu = function Menu() {
