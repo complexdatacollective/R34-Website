@@ -10,7 +10,7 @@ const pageVariants = {
 const Page = function Page({ children }) {
   return (
     <motion.div
-      className="flex-col p-8 h-screen"
+      className="flex flex-col h-screen justify-center content-center"
       variants={pageVariants}
       initial="hidden"
       animate="visible"

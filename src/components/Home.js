@@ -14,40 +14,37 @@ const homeVariants = {
 const Home = function Home() {
   return (
     <motion.div
-      className="flex-col p-8 h-screen"
+      className="flex flex-col h-screen justify-center content-center"
       variants={homeVariants}
       initial="hidden"
       animate="visible"
       exit="hidden"
     >
       <motion.h1
-        className="text-7xl pl-12 ml-20"
+        className="text-7xl"
         whileTap={{ scale: 0.95 }}
       >
         Partner Services Needs Assessment
       </motion.h1>
-      <div className="flex pt-12 pl-12 ml-20">
-        <motion.div
-          className="flex-col justify-center w-1/3"
-        >
+      <div className="flex pt-12">
+        <div className="flex-1 w-1/2">
           <h2 className="text-3xl">Project Summary</h2>
-          <p className="pt-3 text-lg">
+          <p className="text-lg">
             This NIH-funded project aims to
             characterize the needs of health
             departments conducting Partner
             Services through a national needs assessment, followed by a
             reconfiguration of our tool informed by these findings.
           </p>
-          <p className="pt-3 text-lg">
+          <p className="text-lg">
             In 2021, we conducted 15
             interviews across 8 public health
             departments with Partner Services Staff, IT Staff, Program Directors, and
             Informatics Specialists. Explore the key findings from these interviews by
             clicking on a topic.
           </p>
-        </motion.div>
-
-        <div className="grid grid-cols-2 ml-40 mb-10">
+        </div>
+        <div className="flex-1 w-1/2 grid grid-cols-2 ml-40">
           <Link to="/data-quality">
             <motion.img
               src={Blob1}

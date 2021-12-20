@@ -6,7 +6,7 @@ const Menu = function Menu() {
   const [isOpen, setIsOpen] = useState(false);
   const menuClick = () => setIsOpen(!isOpen);
   return (
-    <div>
+    <div className="menu absolute top-12 left-12">
       <button type="button" onClick={menuClick}>
         <svg
           xmlns="http://www.w3.org/2000/svg"

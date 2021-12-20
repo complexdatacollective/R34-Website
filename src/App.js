@@ -12,7 +12,7 @@ import './tailwind.output.css';
 const App = function App() {
   const location = useLocation();
   return (
-    <div className="app">
+    <div className="app container mx-auto">
       <Menu />
       <AnimatePresence exitBeforeEnter initial={false}>
         <Switch location={location} key={location.pathname}>
