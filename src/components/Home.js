@@ -1,4 +1,4 @@
-/* eslint-disable react/jsx-filename-extension */
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -13,6 +13,7 @@ const Home = function Home() {
     visible: { opacity: 1 },
   };
   return (
+
     <div className="flex-col p-8 h-screen">
       <motion.h1
         className="text-7xl pl-12 ml-20"

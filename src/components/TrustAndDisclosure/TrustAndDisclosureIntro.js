@@ -1,4 +1,4 @@
-/* eslint-disable react/jsx-filename-extension */
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useHistory } from 'react-router-dom';
