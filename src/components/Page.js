@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Page = function Page({ children }) {
   return (
@@ -6,6 +7,10 @@ const Page = function Page({ children }) {
       {children}
     </div>
   );
+};
+
+Page.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
 export default Page;
