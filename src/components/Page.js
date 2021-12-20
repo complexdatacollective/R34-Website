@@ -1,11 +1,23 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
+
+const pageVariants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1 },
+};
 
 const Page = function Page({ children }) {
   return (
-    <div className="flex-col p-8 h-screen">
+    <motion.div
+      className="flex-col p-8 h-screen"
+      variants={pageVariants}
+      initial="hidden"
+      animate="visible"
+      exit="hidden"
+    >
       {children}
-    </div>
+    </motion.div>
   );
 };
 

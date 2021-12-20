@@ -6,31 +6,29 @@ import Blob2 from './Home-Icons/Blob2.svg';
 import Blob3 from './Home-Icons/Blob3.svg';
 import Blob4 from './Home-Icons/Blob4.svg';
 
-const Home = function Home() {
-  const fadeOut = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1 },
-  };
-  return (
+const homeVariants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1 },
+};
 
-    <div className="flex-col p-8 h-screen">
+const Home = function Home() {
+  return (
+    <motion.div
+      className="flex-col p-8 h-screen"
+      variants={homeVariants}
+      initial="hidden"
+      animate="visible"
+      exit="hidden"
+    >
       <motion.h1
         className="text-7xl pl-12 ml-20"
         whileTap={{ scale: 0.95 }}
-        variants={fadeOut}
-        animate="visible"
-        exit="hidden"
-        transition={{ duration: 0.5 }}
       >
         Partner Services Needs Assessment
       </motion.h1>
       <div className="flex pt-12 pl-12 ml-20">
         <motion.div
           className="flex-col justify-center w-1/3"
-          variants={fadeOut}
-          animate="visible"
-          exit="hidden"
-          transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl">Project Summary</h2>
           <p className="pt-3 text-lg">
@@ -56,10 +54,6 @@ const Home = function Home() {
               alt="Stream A"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              variants={fadeOut}
-              animate="visible"
-              exit="hidden"
-              transition={{ duration: 0.5 }}
             />
           </Link>
 
@@ -69,10 +63,6 @@ const Home = function Home() {
               alt="Stream B"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              variants={fadeOut}
-              animate="visible"
-              exit="hidden"
-              transition={{ duration: 0.5 }}
             />
           </Link>
           <Link to="/trust-and-disclosure">
@@ -81,10 +71,6 @@ const Home = function Home() {
               alt="Stream C"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              variants={fadeOut}
-              animate="visible"
-              exit="hidden"
-              transition={{ duration: 0.5 }}
             />
           </Link>
           <Link to="/resource-access">
@@ -93,16 +79,11 @@ const Home = function Home() {
               alt="Stream D"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              variants={fadeOut}
-              animate="visible"
-              exit="hidden"
-              transition={{ duration: 0.5 }}
             />
           </Link>
         </div>
       </div>
-
-    </div>
+    </motion.div>
   );
 };
 
