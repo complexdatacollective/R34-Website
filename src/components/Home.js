@@ -2,12 +2,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import Menu from './Menu';
 import Blob1 from './Home-Icons/Blob1.svg';
 import Blob2 from './Home-Icons/Blob2.svg';
 import Blob3 from './Home-Icons/Blob3.svg';
 import Blob4 from './Home-Icons/Blob4.svg';
-import '../tailwind.output.css';
 
 const Home = function Home() {
   const fadeOut = {
@@ -16,7 +14,6 @@ const Home = function Home() {
   };
   return (
     <div className="flex-col p-8 h-screen">
-      <Menu />
       <motion.h1
         className="text-7xl pl-12 ml-20"
         whileTap={{ scale: 0.95 }}
