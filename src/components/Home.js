@@ -14,7 +14,7 @@ const homeVariants = {
 const Home = function Home() {
   return (
     <motion.div
-      className="flex flex-col h-screen justify-center content-center"
+      className="container mx-auto flex flex-col h-screen justify-center content-center"
       variants={homeVariants}
       initial="hidden"
       animate="visible"

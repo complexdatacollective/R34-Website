@@ -1,24 +1,25 @@
-
 import React from 'react';
-import { Switch, Route, useRouteMatch } from 'react-router-dom';
 import EfficiencyIntro from './EfficiencyIntro';
 import Stream from '../Stream';
 import EfficiencyPg2 from './EfficiencyPg2';
 
 const Efficiency = function Efficiency() {
-  const match = useRouteMatch();
-  return (
-    <Stream>
-      <Switch>
-        <Route exact path={match.path}>
-          <EfficiencyIntro />
-        </Route>
-        <Route path={`${match.path}/pg2`}>
-          <EfficiencyPg2 />
-        </Route>
-      </Switch>
-    </Stream>
+  const pages = [
+    {
+      url: 'intro',
+      component: EfficiencyIntro,
+    },
+    {
+      url: 'page2',
+      component: EfficiencyPg2,
+    },
+  ];
 
+  return (
+    <Stream
+      pages={pages}
+      color="bg-red-500"
+    />
   );
 };
 

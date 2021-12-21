@@ -1,5 +1,5 @@
-
 import React, { useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Menu = function Menu() {
   const menuRef = useRef(null);
@@ -22,19 +22,19 @@ const Menu = function Menu() {
       <nav ref={menuRef} className={isOpen ? 'visible' : 'invisible'}>
         <ul>
           <li>
-            <a href="/">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="/data-quality">Data Quality</a>
+            <Link to="/data-quality">Data Quality</Link>
           </li>
           <li>
-            <a href="/efficiency">Efficiency</a>
+            <Link to="/efficiency">Efficiency</Link>
           </li>
           <li>
-            <a href="/trust-and-disclosure">Trust and Disclosure</a>
+            <Link to="/trust-and-disclosure">Trust and Disclosure</Link>
           </li>
           <li>
-            <a href="/resource-access">Resource Access</a>
+            <Link to="/resource-access">Resource Access</Link>
           </li>
         </ul>
       </nav>

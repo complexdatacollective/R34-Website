@@ -1,23 +1,24 @@
-
 import React from 'react';
-import { Switch, Route, useRouteMatch } from 'react-router-dom';
 import ResourceAccessIntro from './ResourceAccessIntro';
 import Stream from '../Stream';
 import ResourceAccessPg2 from './ResourceAccessPg2';
 
 const ResourceAccess = function ResourceAccess() {
-  const match = useRouteMatch();
+  const pages = [
+    {
+      url: 'intro',
+      component: ResourceAccessIntro,
+    },
+    {
+      url: 'page2',
+      component: ResourceAccessPg2,
+    },
+  ];
   return (
-    <Stream>
-      <Switch>
-        <Route exact path={match.path}>
-          <ResourceAccessIntro />
-        </Route>
-        <Route path={`${match.path}/pg2`}>
-          <ResourceAccessPg2 />
-        </Route>
-      </Switch>
-    </Stream>
+    <Stream
+      pages={pages}
+      color="bg-green-500"
+    />
 
   );
 };
