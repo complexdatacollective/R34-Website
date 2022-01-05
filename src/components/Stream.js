@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   Redirect, Route, Switch, useLocation, useRouteMatch, useHistory,
 } from 'react-router';
@@ -37,12 +37,15 @@ const Stream = function Stream({ pages, color }) {
     } else if (e.deltaY < 0) {
       history.push(prevPageUrl);
     }
+    window.removeEventListener('wheel', handleWheel);
   }
+
+  useEffect(() => {
+    window.addEventListener('wheel', handleWheel);
+  });
+
   return (
-    <div
-      className={`${color} h-full flex flex-col`}
-      onWheel={handleWheel}
-    >
+    <div className={`${color} h-full flex flex-col`}>
       <div className="page flex-1 flex flex-col justify-center content-center">
         <Switch>
           <Route exact path={path}>
