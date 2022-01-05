@@ -17,12 +17,12 @@ const Stream = function Stream({ pages, color }) {
     nextStream = '/efficiency';
   } else if (currentStream === 'efficiency') {
     prevStream = '/data-quality';
-    nextStream = '/resource-access';
-  } else if (currentStream === 'resource-access') {
-    prevStream = '/efficiency';
     nextStream = '/trust-and-disclosure';
   } else if (currentStream === 'trust-and-disclosure') {
-    prevStream = '/resource-access';
+    prevStream = '/efficiency';
+    nextStream = '/resource-access';
+  } else if (currentStream === 'resource-access') {
+    prevStream = '/trust-and-disclosure';
   }
 
   const firstPage = React.useMemo(() => pages[0].url, [pages]);
