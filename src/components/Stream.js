@@ -10,6 +10,21 @@ const Stream = function Stream({ pages, color }) {
   const { path } = useRouteMatch();
   const location = useLocation();
 
+  const currentStream = location.pathname.split('/')[1];
+  let prevStream = '';
+  let nextStream = '';
+  if (currentStream === 'data-quality') {
+    nextStream = '/efficiency';
+  } else if (currentStream === 'efficiency') {
+    prevStream = '/data-quality';
+    nextStream = '/resource-access';
+  } else if (currentStream === 'resource-access') {
+    prevStream = '/efficiency';
+    nextStream = '/trust-and-disclosure';
+  } else if (currentStream === 'trust-and-disclosure') {
+    prevStream = '/resource-access';
+  }
+
   const firstPage = React.useMemo(() => pages[0].url, [pages]);
 
   const currentPageIndex = React.useMemo(() => pages.findIndex(
@@ -48,9 +63,13 @@ const Stream = function Stream({ pages, color }) {
           />
         </Switch>
       </div>
-      <div className="flex-shrink-0 p-12 flex content-center justify-center">
+      <div className="flex-shrink-0 p-8 flex content-center justify-center">
         <Link to={nextPageUrl}>Next</Link>
         <Link to={prevPageUrl}>Prev</Link>
+      </div>
+      <div className="flex-shrink-0 p-4 flex content-center justify-center">
+        <Link to={prevStream}>Left</Link>
+        <Link to={nextStream}>Right</Link>
       </div>
     </div>
   );
