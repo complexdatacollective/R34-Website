@@ -17,6 +17,7 @@
     "react-router": "^5.2.1",
     "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",
+    "react-use-scroll-direction": "^0.1.0",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
@@ -35,7 +36,9 @@
       "eslint-config-airbnb"
     ],
     "rules": {
-      "react/function-component-definition": [0],
+      "react/function-component-definition": [
+        0
+      ],
       "react/jsx-filename-extension": [
         1,
         {
