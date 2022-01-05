@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  Redirect, Route, Switch, useLocation, useRouteMatch,
+  Redirect, Route, Switch, useLocation, useRouteMatch, useHistory,
 } from 'react-router';
 import { Link } from 'react-router-dom';
 import { get } from 'lodash';
@@ -9,6 +9,7 @@ import propTypes from 'prop-types';
 const Stream = function Stream({ pages, color }) {
   const { path } = useRouteMatch();
   const location = useLocation();
+  const history = useHistory();
 
   const firstPage = React.useMemo(() => pages[0].url, [pages]);
 
@@ -30,8 +31,18 @@ const Stream = function Stream({ pages, color }) {
     return get(pages, [currentPageIndex - 1, 'url'], '');
   }, [currentPageIndex]);
 
+  function handleWheel(e) {
+    if (e.deltaY > 0) {
+      history.push(nextPageUrl);
+    } else if (e.deltaY < 0) {
+      history.push(prevPageUrl);
+    }
+  }
   return (
-    <div className={`${color} h-full flex flex-col`}>
+    <div
+      className={`${color} h-full flex flex-col`}
+      onWheel={handleWheel}
+    >
       <div className="page flex-1 flex flex-col justify-center content-center">
         <Switch>
           <Route exact path={path}>
