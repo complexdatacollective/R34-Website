@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Redirect, Route, Switch, useLocation, useRouteMatch,
 } from 'react-router';
@@ -47,16 +47,24 @@ const Stream = function Stream({ pages, color }) {
     prevStream = '/trust-and-disclosure';
   }
 
-  const pageVariantsHorizontal = {
+  const [animateRight, setAnimateRight] = useState();
+
+  const pageVariantsRight = {
     hidden: { x: '100vw' },
     visible: { x: 0 },
     exit: { x: '-100vw' },
   };
 
+  const pageVariantsLeft = {
+    hidden: { x: '-100vw' },
+    visible: { x: 0 },
+    exit: { x: '100vw' },
+  };
+
   return (
     <motion.div
       className={`${color} h-full flex flex-col`}
-      variants={pageVariantsHorizontal}
+      variants={animateRight ? pageVariantsRight : pageVariantsLeft}
       initial="hidden"
       animate="visible"
       exit="exit"
@@ -82,8 +90,8 @@ const Stream = function Stream({ pages, color }) {
         <Link to={prevPageUrl}>Prev</Link>
       </div>
       <div className="flex-shrink-0 p-4 flex content-center justify-center">
-        <Link to={prevStream}>Left</Link>
-        <Link to={nextStream}>Right</Link>
+        <Link to={prevStream} onMouseEnter={() => setAnimateRight(false)}>Left</Link>
+        <Link to={nextStream} onMouseEnter={() => setAnimateRight(true)}>Right</Link>
       </div>
     </motion.div>
   );
