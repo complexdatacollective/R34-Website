@@ -2,6 +2,7 @@ import React from 'react';
 import {
   Redirect, Route, Switch, useLocation, useRouteMatch,
 } from 'react-router';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { get } from 'lodash';
 import propTypes from 'prop-types';
@@ -46,8 +47,20 @@ const Stream = function Stream({ pages, color }) {
     prevStream = '/trust-and-disclosure';
   }
 
+  const pageVariantsHorizontal = {
+    hidden: { x: '100vw' },
+    visible: { x: 0 },
+    exit: { x: '-100vw' },
+  };
+
   return (
-    <div className={`${color} h-full flex flex-col`}>
+    <motion.div
+      className={`${color} h-full flex flex-col`}
+      variants={pageVariantsHorizontal}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+    >
       <div className="page flex-1 flex flex-col justify-center content-center">
         <Switch>
           <Route exact path={path}>
@@ -72,7 +85,7 @@ const Stream = function Stream({ pages, color }) {
         <Link to={prevStream}>Left</Link>
         <Link to={nextStream}>Right</Link>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
