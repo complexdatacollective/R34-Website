@@ -1,15 +1,29 @@
-/* eslint-disable react/jsx-filename-extension */
-/* eslint-disable react/prop-types */
 import React from 'react';
-import Menu from './Menu';
+import { motion } from 'framer-motion';
+import PropTypes from 'prop-types';
+
+const pageVariantsVertical = {
+  hidden: { y: '100vh' },
+  visible: { y: 0 },
+  exit: { y: '-100vh' },
+};
 
 const Page = function Page({ children }) {
   return (
-    <div className="flex-col p-8 h-screen">
-      <Menu />
+    <motion.div
+      className="container mx-auto"
+      variants={pageVariantsVertical}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+    >
       {children}
-    </div>
+    </motion.div>
   );
+};
+
+Page.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
 export default Page;

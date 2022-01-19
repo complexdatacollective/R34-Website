@@ -1,12 +1,14 @@
-/* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import { motion } from 'framer-motion';
-import Page from './Page';
-import Blob2 from './Home-Icons/Blob2.svg';
+import { useHistory } from 'react-router-dom';
+import Page from '../Page';
+import Blob2 from '../Home-Icons/Blob2.svg';
 
 const EfficiencyIntro = function EfficiencyIntro() {
+  const history = useHistory();
+  const handleScroll = () => history.push('efficiency/pg2');
   return (
-    <Page>
+    <Page onScroll={handleScroll}>
       <motion.h1 className="text-7xl ml-20">
         Efficiency
       </motion.h1>

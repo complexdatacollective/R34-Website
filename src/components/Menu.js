@@ -1,12 +1,12 @@
-/* eslint-disable react/jsx-filename-extension */
 import React, { useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Menu = function Menu() {
   const menuRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
   const menuClick = () => setIsOpen(!isOpen);
   return (
-    <div>
+    <div className="menu absolute top-12 left-12">
       <button type="button" onClick={menuClick}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -22,10 +22,19 @@ const Menu = function Menu() {
       <nav ref={menuRef} className={isOpen ? 'visible' : 'invisible'}>
         <ul>
           <li>
-            <a href="/About">Project Description</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="/Implementation">Implementation</a>
+            <Link to="/data-quality">Data Quality</Link>
+          </li>
+          <li>
+            <Link to="/efficiency">Efficiency</Link>
+          </li>
+          <li>
+            <Link to="/trust-and-disclosure">Trust and Disclosure</Link>
+          </li>
+          <li>
+            <Link to="/resource-access">Resource Access</Link>
           </li>
         </ul>
       </nav>

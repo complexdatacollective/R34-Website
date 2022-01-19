@@ -1,19 +1,18 @@
-/* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import { motion } from 'framer-motion';
-import Page from './Page';
-import Blob1 from './Home-Icons/Blob1.svg';
+import Page from '../Page';
+import Blob4 from '../Home-Icons/Blob4.svg';
 
-const DataQualityIntro = function DataQualityIntro() {
+const ResourceAccessIntro = function ResourceAccessIntro() {
   return (
     <Page>
       <motion.h1 className="text-7xl ml-20">
-        Data Quality
+        Resource Access
       </motion.h1>
       <div className="flex pt-12">
         <div className="ml-20">
           <motion.img
-            src={Blob1}
+            src={Blob4}
             alt="hero image"
             width="450"
             height="450"
@@ -34,4 +33,4 @@ const DataQualityIntro = function DataQualityIntro() {
   );
 };
 
-export default DataQualityIntro;
+export default ResourceAccessIntro;
