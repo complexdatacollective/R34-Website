@@ -90,8 +90,8 @@ const Stream = function Stream({ pages, color }) {
         <Link to={prevPageUrl}>Prev</Link>
       </div>
       <div className="flex-shrink-0 p-4 flex content-center justify-center">
-        <Link to={prevStream} onMouseEnter={() => setAnimateRight(false)}>Left</Link>
-        <Link to={nextStream} onMouseEnter={() => setAnimateRight(true)}>Right</Link>
+        <Link to={prevStream} onClick={() => setAnimateRight(false)}>Left</Link>
+        <Link to={nextStream} onClick={() => setAnimateRight(true)}>Right</Link>
       </div>
     </motion.div>
   );
